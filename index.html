@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saudação com base na Hora</title>
+    <title>Saudação Completa</title>
 </head>
 <body>
 
 <script>
-    // Obtém a data e hora atuais
+    // 1. Obtém a data e hora atuais
     let data_hora = new Date();
     
-    // Obtém a hora do objeto Date
+    // 2. Pega a hora (de 0 a 23)
     let hora = data_hora.getHours();
 
-    // Verifica se a hora é menor que 12
-    if (hora > 12) {
-        // Se verdadeiro, exibe "Bom dia!!!"
+    // 3. O código que você queria implementar:
+    if (hora < 12) {
+        // Das 0h às 11h
         alert("Bom dia!!!");
+    } else if (hora < 18) {
+        // Das 12h às 17h
+        alert("Boa tarde!!!");
     } else {
-        // Se falso, exibe "Tenha uma ótima tarde/noite"
-        alert("Tenha uma ótima tarde/noite");
+        // Das 18h às 23h
+        alert("Boa noite!!!");
     }
 </script>
 
